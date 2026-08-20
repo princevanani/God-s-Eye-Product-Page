@@ -454,13 +454,3 @@ the fastest way to see what's happening live. Re-running
 [ipleak.net](https://ipleak.net) after loading a new build is a good habit —
 that's literally how the WebGL and font gaps above were found in the first
 place, and code review alone wouldn't have caught either one.
-
-## Scope notes
-
-This is a solid, real v1 — not a padded-out line count. A few things I
-deliberately kept out to avoid breaking sites or ballooning complexity
-without clear benefit: full Public Suffix List domain parsing (the
-approximation in `getRegistrableDomain` is display-only, never used for
-blocking decisions), and aggressive WebRTC blocking (it only strips
-private-IP ICE candidates, not all WebRTC, so video calls keep working).
-Both are reasonable follow-ups if you want to extend it.
