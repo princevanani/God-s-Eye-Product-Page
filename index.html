@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>God's Eye — Browse without being fingerprinted</title>
+<meta name="description" content="God's Eye blocks trackers at the network level and adds consistent noise to the browser signals that let sites fingerprint you — a Chrome extension that helps you blend in instead of standing out." />
+<link rel="icon" type="image/png" href="assets/icon32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <svg viewBox="0 0 40 40" width="24" height="24" aria-hidden="true">
+      <g>
+        <path class="blade" d="M20 20 L20 5 A15 15 0 0 1 33 12.5 Z"/>
+        <path class="blade" d="M20 20 L33 12.5 A15 15 0 0 1 33 27.5 Z"/>
+        <path class="blade" d="M20 20 L33 27.5 A15 15 0 0 1 20 35 Z"/>
+        <path class="blade" d="M20 20 L20 35 A15 15 0 0 1 7 27.5 Z"/>
+        <path class="blade" d="M20 20 L7 27.5 A15 15 0 0 1 7 12.5 Z"/>
+        <path class="blade" d="M20 20 L7 12.5 A15 15 0 0 1 20 5 Z"/>
+      </g>
+      <circle cx="20" cy="20" r="5.5" fill="#F7F4EE"/>
+    </svg>
+    God's Eye
+  </div>
+  <div class="nav-links">
+    <a href="#how-it-works">How it works</a>
+    <a href="#honesty">What it does</a>
+    <a href="#install">Install</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="#install" class="nav-cta">Add to Chrome</a>
+</nav>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">// Chrome extension — privacy &amp; anti-fingerprinting</p>
+    <h1>Control your exposure.</h1>
+    <p>God's Eye blocks trackers before they load and adds consistent, imperceptible noise to the signals sites use to fingerprint your browser — so you blend into the crowd instead of standing out from it.</p>
+    <div class="hero-ctas">
+      <a href="#install" class="btn btn-primary">Add to Chrome — it's free</a>
+      <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+    </div>
+  </div>
+  <div class="aperture-hero">
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="100" r="96" fill="none" stroke="#E2DDD0" stroke-width="1"/>
+      <g>
+        <path class="blade" d="M100 100 L100 20 A80 80 0 0 1 169 60 Z"/>
+        <path class="blade" d="M100 100 L169 60 A80 80 0 0 1 169 140 Z"/>
+        <path class="blade" d="M100 100 L169 140 A80 80 0 0 1 100 180 Z"/>
+        <path class="blade" d="M100 100 L100 180 A80 80 0 0 1 31 140 Z"/>
+        <path class="blade" d="M100 100 L31 140 A80 80 0 0 1 31 60 Z"/>
+        <path class="blade" d="M100 100 L31 60 A80 80 0 0 1 100 20 Z"/>
+      </g>
+      <circle cx="100" cy="100" r="28" fill="#F7F4EE" stroke="#0F5C56" stroke-width="1.5"/>
+    </svg>
+  </div>
+</section>
+
+<section id="features">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">What it does</p>
+      <h2>Two engines, one goal</h2>
+      <p>Most of the web's tracking infrastructure works because your browser hands over consistent, identifying details for free. God's Eye interrupts that at two separate layers.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <p class="feature-num">01</p>
+        <h3>Network-level blocking</h3>
+        <p>Every request is checked against a tracker list before it leaves your browser, using Chrome's declarative request engine — not a script reacting after the fact.</p>
+      </div>
+      <div class="feature-card">
+        <p class="feature-num">02</p>
+        <h3>Noise, not gaps</h3>
+        <p>Canvas, WebGL, audio, and device signals get small, consistent noise instead of being disabled outright. A missing API is its own fingerprint — blending in works better than opting out.</p>
+      </div>
+      <div class="feature-card">
+        <p class="feature-num">03</p>
+        <h3>Nothing hidden from you</h3>
+        <p>A banner and popup show exactly which trackers were caught, in real time, with a one-click exception for the rare site that breaks under protection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Under the hood</p>
+      <h2>How it works</h2>
+      <p>Two independent engines run on every page — one at the network level, one at the browser-API level.</p>
+    </div>
+    <div class="engines">
+      <div class="engine-card">
+        <h3>The network engine</h3>
+        <p class="engine-sub">Runs before a single byte of a tracker's response reaches your machine</p>
+        <div class="flow-step">
+          <div class="flow-dot">1</div>
+          <div class="flow-text"><strong>Request goes out</strong><span>Your browser is about to load a script, image, or pixel from a third-party domain.</span></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">2</div>
+          <div class="flow-text"><strong>Checked against the ruleset</strong><span>Chrome's own request engine compares the domain against a known-tracker list — no page script involved.</span></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">3</div>
+          <div class="flow-text"><strong>Blocked or allowed</strong><span>A match is severed instantly. Everything else loads exactly as it would have.</span></div>
+        </div>
+      </div>
+      <div class="engine-card">
+        <h3>The fingerprint engine</h3>
+        <p class="engine-sub">Runs the instant a page starts loading, before its own scripts execute</p>
+        <div class="flow-step">
+          <div class="flow-dot">1</div>
+          <div class="flow-text"><strong>Page starts loading</strong><span>Before any of the page's own JavaScript runs, protective code is already in place.</span></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">2</div>
+          <div class="flow-text"><strong>Signals get seeded noise</strong><span>Canvas, WebGL, and audio reads return consistent, slightly-off values — stable for this site today, different tomorrow.</span></div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-dot">3</div>
+          <div class="flow-text"><strong>A common profile, not a gap</strong><span>The site sees plausible, ordinary-looking values — not a suspicious absence of data.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="honesty">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Being straight with you</p>
+      <h2>What this can and can't promise</h2>
+      <p>Most privacy tools oversell. Here's what God's Eye actually does — and the parts of tracking that no browser extension can reach.</p>
+    </div>
+    <div class="honesty honesty-grid">
+      <div class="honesty-col does">
+        <h4>What it does</h4>
+        <ul>
+          <li>Blocks known tracker and ad-network domains before they load</li>
+          <li>Adds consistent noise to canvas, WebGL, and audio fingerprinting</li>
+          <li>Normalizes device info, screen metrics, and timezone to common values</li>
+          <li>Shows you exactly what was caught, on every page, in real time</li>
+        </ul>
+      </div>
+      <div class="honesty-col doesnt">
+        <h4>What it can't do</h4>
+        <ul>
+          <li>Hide your IP address — that needs a VPN, not an extension</li>
+          <li>Guarantee a "not unique" score on every fingerprint test — that level of uniformity generally requires a browser built for it, at the cost of normal site compatibility</li>
+          <li>Protect you if you're signed into an account — that identifies you on purpose</li>
+          <li>Stop a network-level or TLS-level fingerprint — those sit below what any extension can reach</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="eyebrow">Getting started</p>
+      <h2>Install in under a minute</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div><h4>Add the extension</h4><p>Install from the Chrome Web Store, or load it unpacked from source if you're building from the repository.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div><h4>Browse normally</h4><p>Protection is on by default. No setup, no accounts, nothing to configure before it starts working.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div><h4>Check the popup anytime</h4><p>See what's been caught on the current page, and toggle individual protections if a specific site needs them off.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div><h4>Allow a site if it breaks</h4><p>Click "Keep &amp; Allow" on the warning banner, or flip the per-site switch in the popup — protection resumes everywhere else.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner">
+    <div class="cta-band">
+      <h2>Stop handing out your fingerprint for free.</h2>
+      <p>Free, open, and it runs entirely on your device — no accounts, no servers, no telemetry.</p>
+      <a href="#" class="btn btn-primary">Add to Chrome — it's free</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="./privacy/index.html">Privacy Policy</a>
+      <a href="./terms/index.html">Terms</a>
+      <a href="./contact/index.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 God's Eye.</p>
+  </div>
+</footer>
+
+</body>
+</html>

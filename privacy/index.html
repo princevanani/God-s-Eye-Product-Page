@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — God's Eye</title>
+<link rel="icon" type="image/png" href="./../assets/icon32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./../style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="./../index.html" class="nav-brand" style="text-decoration:none;">
+    <svg viewBox="0 0 40 40" width="24" height="24" aria-hidden="true">
+      <g>
+        <path class="blade" d="M20 20 L20 5 A15 15 0 0 1 33 12.5 Z"/>
+        <path class="blade" d="M20 20 L33 12.5 A15 15 0 0 1 33 27.5 Z"/>
+        <path class="blade" d="M20 20 L33 27.5 A15 15 0 0 1 20 35 Z"/>
+        <path class="blade" d="M20 20 L20 35 A15 15 0 0 1 7 27.5 Z"/>
+        <path class="blade" d="M20 20 L7 27.5 A15 15 0 0 1 7 12.5 Z"/>
+        <path class="blade" d="M20 20 L7 12.5 A15 15 0 0 1 20 5 Z"/>
+      </g>
+      <circle cx="20" cy="20" r="5.5" fill="#F7F4EE"/>
+    </svg>
+    God's Eye
+  </a>
+  <div class="nav-links">
+    <a href="./../index.html#how-it-works">How it works</a>
+    <a href="./../index.html#honesty">What it does</a>
+    <a href="./../contact/index.html">Contact</a>
+  </div>
+</nav>
+
+<div class="legal">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: August 2026</p>
+
+  <p>God's Eye is built around a simple rule: the extension that protects your privacy shouldn't need to collect any of its own. This page explains exactly what data exists, where it lives, and who can see it.</p>
+
+  <h2>What we collect</h2>
+  <p>Nothing is sent to us. There is no analytics SDK, no telemetry, no remote server this extension talks to for its own purposes. We have no account system, no logging pipeline, and no way to see your browsing activity.</p>
+
+  <h2>What's stored, and where</h2>
+  <p>The extension keeps a small amount of data in Chrome's local extension storage, on your device only:</p>
+  <ul>
+    <li>Your protection settings (which categories are on, any sites you've allowlisted, any domains you've custom-blocked)</li>
+    <li>A randomly generated install identifier, used only to seed fingerprint noise consistently on your own device — it is never transmitted anywhere</li>
+    <li>A temporary, per-tab count of trackers seen on the current page, cleared on navigation</li>
+  </ul>
+  <p>None of this leaves your browser. Uninstalling the extension removes it.</p>
+
+  <h2>Permissions, and why</h2>
+  <ul>
+    <li><strong>Read and modify data on all sites</strong> — required to inject fingerprint-masking protections before a page's own scripts run, and to block tracker requests</li>
+    <li><strong>Network request observation</strong> — used locally to detect and display which trackers were caught on the current page; nothing about these requests is transmitted anywhere</li>
+    <li><strong>Storage</strong> — for the local settings described above</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <p>The extension blocks connections to known tracking domains; it doesn't establish new ones of its own. If you choose to run the optional EasyList/EasyPrivacy import, that file comes from a source you download yourself — we never fetch it on your behalf.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this ever changes — for example, if a future version adds an optional cloud feature — this page will be updated first, and any new data collection will be opt-in.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: see the <a href="../contact/index.html">contact page</a>.</p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="./../privacy/index.html">Privacy Policy</a>
+      <a href="./../terms/index.html">Terms</a>
+      <a href="./../contact/index.html">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 God's Eye.</p>
+  </div>
+</footer>
+
+</body>
+</html>
